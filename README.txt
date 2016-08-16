@@ -65,11 +65,11 @@ single signon systems.
  6. Hook up the login URLs to your application's urlconf with
     something like:
 
-        urlpatterns = patterns('',
+        urlpatterns = [
             ...
             (r'^openid/', include('django_openid_auth.urls')),
             ...
-        )
+        ]
 
  7. Configure the LOGIN_URL and LOGIN_REDIRECT_URL appropriately for
     your site:
