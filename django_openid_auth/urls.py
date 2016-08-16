@@ -30,9 +30,10 @@
 from __future__ import unicode_literals
 
 from django.conf.urls import url
+from django_openid_auth import views
 
 urlpatterns = [
-    url(r'^login/$', 'django_openid_auth.views.login_begin', name='openid-login'),
-    url(r'^complete/$', 'django_openid_auth.views.login_complete', name='openid-complete'),
-    url(r'^logo.gif$', 'django_openid_auth.views.logo', name='openid-logo'),
+    url(r'^login/$', views.login_begin, name='openid-login'),
+    url(r'^complete/$', views.login_complete, name='openid-complete'),
+    url(r'^logo.gif$', views.logo, name='openid-logo'),
 ]
