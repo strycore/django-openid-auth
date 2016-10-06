@@ -135,8 +135,10 @@ def default_render_failure(request, message, status=403,
                            exception=None):
     """Render an error page to the user."""
     data = render_to_string(
-        template_name, dict(message=message, exception=exception),
-        context_instance=RequestContext(request))
+        template_name,
+        context=dict(message=message, exception=exception),
+        request=request
+    )
     return HttpResponse(data, status=status)
 
 
