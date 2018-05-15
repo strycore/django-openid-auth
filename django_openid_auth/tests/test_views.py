@@ -40,7 +40,7 @@ from django.conf import settings
 from django.contrib.auth.models import User, Group, Permission
 try:
     from django.core.urlresolvers import reverse
-except ModuleNotFoundError:
+except ImportError:
     from django.urls import reverse
 from django.http import HttpRequest, HttpResponse
 from django.test import TestCase

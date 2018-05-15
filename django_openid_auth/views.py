@@ -42,7 +42,7 @@ from django.contrib.auth import (
 from django.contrib.auth.models import Group
 try:
     from django.core.urlresolvers import reverse
-except ModuleNotFoundError:
+except ImportError:
     from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.http.request import QueryDict
